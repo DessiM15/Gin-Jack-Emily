@@ -140,7 +140,7 @@ export default function Footer() {
 
               {/* Facebook */}
               <a
-                href="#"
+                href="https://www.facebook.com/share/1C6y57HcrP/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on Facebook"

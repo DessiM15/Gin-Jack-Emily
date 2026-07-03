@@ -242,7 +242,7 @@ export default function ContactPage() {
                     </a>
                     {/* Facebook */}
                     <a
-                      href="#"
+                      href="https://www.facebook.com/share/1C6y57HcrP/?mibextid=wwXIfr"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-warm-white transition-all duration-300"
