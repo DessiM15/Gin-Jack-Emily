@@ -41,15 +41,40 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // TODO: Connect to Web3Forms — replace with actual API call
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'c1224964-b33b-421f-8e2b-12cdafe8a0b7',
+          subject: `New Inquiry from ${formData.fullName} — ${formData.eventType}`,
+          from_name: formData.fullName,
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          event_date: formData.eventDate,
+          event_type: formData.eventType,
+          guest_count: formData.guestCount,
+          package_interest: formData.packageInterest,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setIsSubmitted(true);
+      } else {
+        alert('Something went wrong. Please try again or contact us directly.');
+      }
+    } catch {
+      alert('Something went wrong. Please try again or contact us directly.');
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1500);
+    }
   };
 
   const resetForm = () => {
