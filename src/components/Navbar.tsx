@@ -23,6 +23,13 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const handleScroll = useCallback(() => {
     setScrolled(window.scrollY > 20);
   }, []);
@@ -64,7 +71,7 @@ export default function Navbar() {
             scrolled ? "h-0 opacity-0 overflow-hidden" : "h-52 opacity-100"
           } flex items-center justify-between`}
         >
-          <Link href="/" className="relative flex-shrink-0">
+          <Link href="/" onClick={handleLogoClick} className="relative flex-shrink-0">
             <Image
               src="/logos/full-light.png"
               alt="Gin & Jack Mobile Bar"
@@ -139,7 +146,7 @@ export default function Navbar() {
           </div>
 
           {/* Center: scroll logo */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" onClick={handleLogoClick} className="flex-shrink-0">
             <Image
               src="/logos/scroll-logo.png"
               alt="G&J"
