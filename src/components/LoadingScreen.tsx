@@ -15,15 +15,7 @@ export default function LoadingScreen() {
   const shimmerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Only show on first visit per session
-    const hasVisited = sessionStorage.getItem('gj-visited');
-    if (hasVisited) {
-      setShow(false);
-      return;
-    }
-
     setShow(true);
-    sessionStorage.setItem('gj-visited', 'true');
 
     // Lock scroll during loading screen
     document.body.style.overflow = 'hidden';
