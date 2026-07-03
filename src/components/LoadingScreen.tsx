@@ -114,9 +114,9 @@ export default function LoadingScreen() {
           <Image
             src="/logos/full-dark.png"
             alt="Gin & Jack Mobile Bar"
-            width={560}
-            height={168}
-            className="h-32 md:h-44 w-auto"
+            width={800}
+            height={240}
+            className="h-48 md:h-72 w-auto"
             priority
           />
           {/* Gold shimmer sweep */}
