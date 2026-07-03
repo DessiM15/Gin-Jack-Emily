@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gin & Jack Mobile Bar — Social Media & Growth Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FAF7F2;
+      --cream-dark: #F0EBE3;
+      --gold: #C4A265;
+      --gold-light: #E8D5B7;
+      --gold-dark: #A8894F;
+      --sage: #8B9E8B;
+      --sage-light: #D4DDD4;
+      --sage-dark: #5C6F5C;
+      --brown: #3D3229;
+      --brown-light: #6B5B4E;
+      --warm-white: #FFFDF9;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--cream);
+      color: var(--brown);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .script {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: white; font-size: 11px; }
+      .no-print { display: none !important; }
+      .page-break { page-break-before: always; }
+      .cover { min-height: 100vh; }
+      section { page-break-inside: avoid; }
+      .card { break-inside: avoid; }
+    }
+
+    /* Cover Page */
+    .cover {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: var(--brown);
+      color: var(--warm-white);
+      padding: 60px 40px;
+      position: relative;
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      inset: 30px;
+      border: 1px solid var(--gold);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .cover h1 {
+      font-size: 52px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .cover .subtitle {
+      font-size: 14px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 60px;
+    }
+
+    .cover .guide-title {
+      font-size: 36px;
+      color: var(--warm-white);
+      margin-bottom: 16px;
+    }
+
+    .cover .guide-subtitle {
+      font-size: 16px;
+      color: rgba(255,253,249,0.7);
+      max-width: 500px;
+      line-height: 1.8;
+    }
+
+    .cover .divider {
+      width: 80px;
+      height: 1px;
+      background: var(--gold);
+      margin: 40px auto;
+    }
+
+    .cover .year {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      opacity: 0.6;
+      margin-top: 60px;
+    }
+
+    /* Download button */
+    .download-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--brown);
+      padding: 16px 40px;
+      text-align: center;
+      z-index: 100;
+      border-top: 1px solid var(--gold);
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--warm-white);
+      padding: 12px 40px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .download-btn:hover {
+      background: var(--gold-dark);
+    }
+
+    /* Content sections */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 40px 120px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      color: var(--gold);
+      opacity: 0.3;
+      font-weight: 300;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .section-divider {
+      width: 50px;
+      height: 1px;
+      background: var(--gold);
+      margin: 16px 0 24px;
+    }
+
+    .section p, .section li {
+      color: var(--brown-light);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .section ul, .section ol {
+      padding-left: 20px;
+      margin: 16px 0;
+    }
+
+    .section li {
+      margin-bottom: 8px;
+    }
+
+    .section strong {
+      color: var(--brown);
+      font-weight: 600;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--warm-white);
+      border: 1px solid var(--gold-light);
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin: 16px 0;
+    }
+
+    .card h4 {
+      font-size: 20px;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .card-gold {
+      border-left: 3px solid var(--gold);
+    }
+
+    .card-sage {
+      border-left: 3px solid var(--sage);
+    }
+
+    /* Checklist */
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+
+    .checklist li {
+      padding: 8px 0 8px 32px;
+      position: relative;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 16px;
+      height: 16px;
+      border: 1.5px solid var(--gold);
+      border-radius: 3px;
+    }
+
+    /* Grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+
+    @media (max-width: 600px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .cover h1 { font-size: 36px; }
+      .cover .guide-title { font-size: 24px; }
+      .content { padding: 40px 24px 120px; }
+      .section h2 { font-size: 26px; }
+    }
+
+    /* Highlight box */
+    .highlight {
+      background: var(--cream-dark);
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin: 20px 0;
+    }
+
+    .highlight h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--gold-dark);
+      margin-bottom: 8px;
+    }
+
+    /* Tag/badge */
+    .tag {
+      display: inline-block;
+      background: var(--gold-light);
+      color: var(--brown);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin: 4px 4px 4px 0;
+    }
+
+    .tag-sage {
+      background: var(--sage-light);
+      color: var(--sage-dark);
+    }
+
+    /* Table */
+    .simple-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+
+    .simple-table th {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .simple-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--cream-dark);
+      font-size: 13px;
+      color: var(--brown-light);
+    }
+
+    /* Quote */
+    .quote {
+      border-left: 2px solid var(--gold);
+      padding: 16px 24px;
+      margin: 20px 0;
+      font-style: italic;
+      color: var(--brown-light);
+    }
+
+    .quote .author {
+      font-style: normal;
+      font-size: 12px;
+      color: var(--gold-dark);
+      margin-top: 8px;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--warm-white);
+      border: 1px solid var(--gold-light);
+      border-radius: 8px;
+      padding: 32px 36px;
+      margin: 40px 0;
+    }
+
+    .toc h3 {
+      font-size: 24px;
+      color: var(--brown);
+      margin-bottom: 20px;
+    }
+
+    .toc ol {
+      list-style: none;
+      padding: 0;
+      counter-reset: toc-counter;
+    }
+
+    .toc li {
+      counter-increment: toc-counter;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--cream-dark);
+      font-size: 14px;
+    }
+
+    .toc li::before {
+      content: "0" counter(toc-counter);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--gold);
+      margin-right: 16px;
+      font-weight: 600;
+    }
+
+    .toc li:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- COVER PAGE -->
+  <div class="cover">
+    <h1 class="script">Gin & Jack</h1>
+    <p class="subtitle">Mobile Bar</p>
+    <div class="divider"></div>
+    <h2 class="guide-title">Social Media & Growth Guide</h2>
+    <p class="guide-subtitle">
+      A strategic playbook for building your brand, attracting wedding clients,
+      and growing Gin & Jack into Houston's most sought-after mobile bar.
+    </p>
+    <p class="year">2025 — Houston, Texas</p>
+  </div>
+
+  <!-- DOWNLOAD BAR -->
+  <div class="download-bar no-print">
+    <button class="download-btn" onclick="window.print()">Download as PDF</button>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+      <h3>What's Inside</h3>
+      <ol>
+        <li>Your Wedding-First Strategy</li>
+        <li>Content Collection Checklist</li>
+        <li>Social Media Content Ideas</li>
+        <li>Instagram Strategy & Hashtags</li>
+        <li>Brand Voice & Visual Guidelines</li>
+        <li>Outreach Targets & Partnerships</li>
+        <li>Partnership Pitch Templates</li>
+        <li>Online Presence & Vendor Platforms</li>
+        <li>Referral & Review Strategy</li>
+        <li>Seasonal Content Calendar</li>
+      </ol>
+    </div>
+
+    <!-- SECTION 1: WEDDING-FIRST STRATEGY -->
+    <div class="section page-break">
+      <span class="section-number">01</span>
+      <h2>Your Wedding-First Strategy</h2>
+      <div class="section-divider"></div>
+
+      <p>Weddings are where the money is — and they're also the best marketing tool you'll ever have. A single wedding puts your work in front of 100-250 guests, most of whom are in the same life stage (engagements, milestone events, future weddings). Every wedding you serve is a live advertisement.</p>
+
+      <div class="highlight">
+        <h4>Why Weddings First</h4>
+        <ul>
+          <li><strong>Highest ticket value</strong> — Your packages range from $800-$1,400+, and weddings consistently book the top tiers</li>
+          <li><strong>Built-in referral network</strong> — Bridesmaids, groomsmen, and guests are your next clients</li>
+          <li><strong>Vendor cross-pollination</strong> — Every wedding connects you with planners, photographers, DJs, and venues who can refer future work</li>
+          <li><strong>Content goldmine</strong> — Weddings produce the most beautiful, shareable content for your brand</li>
+          <li><strong>Seasonal predictability</strong> — Wedding seasons (spring + fall in Houston) give you a reliable booking rhythm</li>
+        </ul>
+      </div>
+
+      <div class="card card-gold">
+        <h4>The Ripple Effect</h4>
+        <p>One wedding done well leads to: 2-3 future bookings from guests who saw you work, a vendor relationship that sends you 3-5 referrals/year, and 15-20 pieces of high-quality content for your feed. <strong>Focus here first. Everything else follows.</strong></p>
+      </div>
+    </div>
+
+    <!-- SECTION 2: CONTENT COLLECTION CHECKLIST -->
+    <div class="section page-break">
+      <span class="section-number">02</span>
+      <h2>Content Collection Checklist</h2>
+      <div class="section-divider"></div>
+
+      <p>Every event is a content opportunity. Here's exactly what to capture — even if it's just your phone. Set a reminder to grab these before you get busy pouring.</p>
+
+      <h3 style="font-size: 22px; margin: 24px 0 12px;">Before the Event</h3>
+      <ul class="checklist">
+        <li>Clean, styled bar setup — shoot from multiple angles (straight on, 45-degree, detail shots)</li>
+        <li>Close-up of menu/signage display on the bar</li>
+        <li>Equipment and tools laid out neatly (shakers, jiggers, garnishes)</li>
+        <li>Garnish prep — cutting citrus, arranging herbs, filling ice</li>
+        <li>Full venue shot showing your bar in the space (shows clients what it looks like at their venue type)</li>
+        <li>Selfie or team photo in uniform, looking sharp and ready</li>
+      </ul>
+
+      <h3 style="font-size: 22px; margin: 24px 0 12px;">During the Event</h3>
+      <ul class="checklist">
+        <li>Action shots — pouring, shaking, muddling, garnishing (ask a friend or guest to snap these)</li>
+        <li>Signature cocktail close-ups with nice lighting</li>
+        <li>Happy guests receiving their drinks (get verbal permission first)</li>
+        <li>The couple interacting with the bar or holding drinks (the money shot for wedding content)</li>
+        <li>Boomerang/short video of a pour or shake</li>
+        <li>Wide shot of the bar with a line or crowd around it (shows demand)</li>
+        <li>Any special moments — toasts, first cocktails as newlyweds, etc.</li>
+      </ul>
+
+      <h3 style="font-size: 22px; margin: 24px 0 12px;">After the Event</h3>
+      <ul class="checklist">
+        <li>Screenshot or save any kind words the client sends via text or email</li>
+        <li>Note the venue name, planner name, and photographer's Instagram handle</li>
+        <li>Request professional photos from the photographer (offer credit/tag exchange)</li>
+        <li>Ask the client for a Google or Instagram review within 48 hours while it's fresh</li>
+        <li>Save any photos the couple or guests tag you in</li>
+      </ul>
+
+      <div class="quote">
+        "The best content comes from real events. Stock photos are a placeholder — your actual work is what sells."
+      </div>
+    </div>
+
+    <!-- SECTION 3: CONTENT IDEAS -->
+    <div class="section page-break">
+      <span class="section-number">03</span>
+      <h2>Social Media Content Ideas</h2>
+      <div class="section-divider"></div>
+
+      <p>Mix these content types to keep your feed varied and engaging. Aim for 3-4 posts per week and daily Stories when you have events.</p>
+
+      <div class="grid-2">
+        <div class="card card-gold">
+          <h4>Event Recaps</h4>
+          <p>3-5 photo carousel from a recent event. Tag the venue, planner, and photographer. Write a short caption about the couple or the vibe.</p>
+          <div style="margin-top: 12px;"><span class="tag">Carousel</span><span class="tag">High Value</span></div>
+        </div>
+
+        <div class="card card-gold">
+          <h4>Behind the Scenes</h4>
+          <p>Show your prep process — loading the car, setting up, prepping garnishes. People love seeing the work behind the magic.</p>
+          <div style="margin-top: 12px;"><span class="tag">Reel</span><span class="tag">Story</span></div>
+        </div>
+
+        <div class="card card-gold">
+          <h4>Signature Cocktail Spotlights</h4>
+          <p>Feature a cocktail with a beautiful photo + recipe or description. Bonus: name it after the couple's event theme.</p>
+          <div style="margin-top: 12px;"><span class="tag">Single Post</span><span class="tag">Reel</span></div>
+        </div>
+
+        <div class="card card-gold">
+          <h4>Setup Transformations</h4>
+          <p>"Before & After" Reel — empty space to fully styled bar. Set to trending audio. These perform extremely well.</p>
+          <div style="margin-top: 12px;"><span class="tag">Reel</span><span class="tag">Viral Potential</span></div>
+        </div>
+
+        <div class="card card-gold">
+          <h4>Client Testimonials</h4>
+          <p>Screenshot a text/review and design it as a branded graphic, or film a short video testimonial at the event.</p>
+          <div style="margin-top: 12px;"><span class="tag">Carousel</span><span class="tag">Trust Builder</span></div>
+        </div>
+
+        <div class="card card-gold">
+          <h4>Educational Content</h4>
+          <p>"3 things to ask your mobile bartender" / "How to choose a signature cocktail" / "What's included in mobile bar service"</p>
+          <div style="margin-top: 12px;"><span class="tag">Carousel</span><span class="tag">Reel</span></div>
+        </div>
+
+        <div class="card card-gold">
+          <h4>Day-in-the-Life</h4>
+          <p>Film your day from morning prep to event night. Authentic, relatable, and shows professionalism. Brides love seeing the person behind the brand.</p>
+          <div style="margin-top: 12px;"><span class="tag">Reel</span><span class="tag">Story</span></div>
+        </div>
+
+        <div class="card card-gold">
+          <h4>Meet the Bartender</h4>
+          <p>Introduce yourself — who you are, why you started, what you love about it. Personal connection converts followers to clients.</p>
+          <div style="margin-top: 12px;"><span class="tag">Reel</span><span class="tag">Pin to Profile</span></div>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <h4>Quick Reel Ideas That Perform</h4>
+        <ul>
+          <li>"POV: You hired a mobile bar for your wedding" — show the setup + happy crowd</li>
+          <li>Cocktail-making ASMR — close-up of ice cracking, pouring, garnishing</li>
+          <li>"Things mobile bartenders wish brides knew" — educational + relatable</li>
+          <li>Timelapse of full event setup from empty to ready</li>
+          <li>"What $800 vs $1,400 gets you" — showcase your package tiers visually</li>
+          <li>Trending audio + bar setup montage synced to the beat</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SECTION 4: INSTAGRAM STRATEGY -->
+    <div class="section page-break">
+      <span class="section-number">04</span>
+      <h2>Instagram Strategy & Hashtags</h2>
+      <div class="section-divider"></div>
+
+      <h3 style="font-size: 22px; margin: 0 0 16px;">Profile Optimization</h3>
+      <div class="card card-sage">
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 12px;"><strong>Name field:</strong> Gin & Jack Mobile Bar | Houston</li>
+          <li style="margin-bottom: 12px;"><strong>Bio:</strong> Houston's mobile bartending service for weddings & events. Professional service. Crafted cocktails. Unforgettable vibes. Book below.</li>
+          <li style="margin-bottom: 12px;"><strong>Link:</strong> Your website contact page (use Linktree if you need multiple links)</li>
+          <li style="margin-bottom: 12px;"><strong>Highlights:</strong> Packages | Weddings | Setup | Reviews | FAQs | About Emily</li>
+          <li><strong>Pinned posts:</strong> 1) Intro Reel 2) Best event recap 3) Packages overview</li>
+        </ul>
+      </div>
+
+      <h3 style="font-size: 22px; margin: 24px 0 16px;">Hashtag Strategy</h3>
+      <p>Use 15-20 hashtags per post. Mix these categories:</p>
+
+      <h4 style="font-size: 16px; margin: 20px 0 10px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-dark);">Houston Wedding (Primary)</h4>
+      <div>
+        <span class="tag">#HoustonWedding</span>
+        <span class="tag">#HoustonBride</span>
+        <span class="tag">#HoustonWeddingVendor</span>
+        <span class="tag">#HTXWedding</span>
+        <span class="tag">#HoustonWeddingPlanner</span>
+        <span class="tag">#TexasWedding</span>
+        <span class="tag">#HoustonEvents</span>
+        <span class="tag">#HoustonWeddings</span>
+      </div>
+
+      <h4 style="font-size: 16px; margin: 20px 0 10px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-dark);">Mobile Bar Specific</h4>
+      <div>
+        <span class="tag">#MobileBar</span>
+        <span class="tag">#MobileBartender</span>
+        <span class="tag">#MobileBarHouston</span>
+        <span class="tag">#WeddingBar</span>
+        <span class="tag">#WeddingBartender</span>
+        <span class="tag">#CocktailBar</span>
+        <span class="tag">#WeddingCocktails</span>
+        <span class="tag">#MobileBarService</span>
+      </div>
+
+      <h4 style="font-size: 16px; margin: 20px 0 10px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-dark);">Engagement & Discovery</h4>
+      <div>
+        <span class="tag">#SayIDo</span>
+        <span class="tag">#WeddingPlanning</span>
+        <span class="tag">#BrideToBeHouston</span>
+        <span class="tag">#EngagedInHouston</span>
+        <span class="tag">#WeddingInspo</span>
+        <span class="tag">#SignatureCocktails</span>
+        <span class="tag">#CraftCocktails</span>
+        <span class="tag">#DrinkMenu</span>
+      </div>
+
+      <h4 style="font-size: 16px; margin: 20px 0 10px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-dark);">Branded (use every post)</h4>
+      <div>
+        <span class="tag">#GinAndJackMobileBar</span>
+        <span class="tag">#GinAndJack</span>
+        <span class="tag">#GinAndJackHTX</span>
+      </div>
+
+      <div class="highlight" style="margin-top: 24px;">
+        <h4>Posting Schedule (Suggested)</h4>
+        <table class="simple-table">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Content Type</th>
+              <th>Format</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>Behind the scenes / prep</td>
+              <td>Story</td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>Cocktail spotlight or tip</td>
+              <td>Reel or Carousel</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>Event recap or testimonial</td>
+              <td>Carousel</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>Live event stories</td>
+              <td>Story series</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>Reel from weekend event</td>
+              <td>Reel</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SECTION 5: BRAND VOICE -->
+    <div class="section page-break">
+      <span class="section-number">05</span>
+      <h2>Brand Voice & Visual Guidelines</h2>
+      <div class="section-divider"></div>
+
+      <p>Consistency builds trust and recognition. Every post should feel like it belongs to the same brand — elegant, warm, approachable, and professional.</p>
+
+      <h3 style="font-size: 22px; margin: 24px 0 12px;">Voice & Tone</h3>
+      <div class="grid-2">
+        <div class="card card-gold">
+          <h4>Do</h4>
+          <ul>
+            <li>Warm and inviting — like talking to a trusted friend</li>
+            <li>Confident but not boastful</li>
+            <li>Professional without being corporate</li>
+            <li>Romantic and celebratory language</li>
+            <li>Short, punchy captions with personality</li>
+          </ul>
+        </div>
+        <div class="card" style="border-left: 3px solid #c46565;">
+          <h4>Don't</h4>
+          <ul>
+            <li>Overly casual or slangy</li>
+            <li>Pushy sales language ("DM us NOW!")</li>
+            <li>Negative comments about other vendors</li>
+            <li>Using excessive emojis (1-2 per caption max)</li>
+            <li>Generic stock captions ("Another beautiful wedding!")</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="font-size: 22px; margin: 24px 0 12px;">Visual Identity</h3>
+      <div class="card card-sage">
+        <h4>Color Palette for Graphics</h4>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px;">
+          <div style="text-align: center;">
+            <div style="width: 60px; height: 60px; background: #FAF7F2; border: 1px solid #E8D5B7; border-radius: 8px;"></div>
+            <p style="font-size: 10px; margin-top: 6px;">Cream<br>#FAF7F2</p>
+          </div>
+          <div style="text-align: center;">
+            <div style="width: 60px; height: 60px; background: #C4A265; border-radius: 8px;"></div>
+            <p style="font-size: 10px; margin-top: 6px;">Gold<br>#C4A265</p>
+          </div>
+          <div style="text-align: center;">
+            <div style="width: 60px; height: 60px; background: #8B9E8B; border-radius: 8px;"></div>
+            <p style="font-size: 10px; margin-top: 6px;">Sage<br>#8B9E8B</p>
+          </div>
+          <div style="text-align: center;">
+            <div style="width: 60px; height: 60px; background: #3D3229; border-radius: 8px;"></div>
+            <p style="font-size: 10px; margin-top: 6px;">Brown<br>#3D3229</p>
+          </div>
+          <div style="text-align: center;">
+            <div style="width: 60px; height: 60px; background: #FFFDF9; border: 1px solid #E8D5B7; border-radius: 8px;"></div>
+            <p style="font-size: 10px; margin-top: 6px;">Warm White<br>#FFFDF9</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <h4>Photo Editing Tips</h4>
+        <ul>
+          <li><strong>Warm tones</strong> — Increase warmth slightly, reduce blue tones</li>
+          <li><strong>Soft contrast</strong> — Not too harsh, keep it airy and inviting</li>
+          <li><strong>Consistent filter</strong> — Pick one Lightroom preset or Instagram filter and stick with it</li>
+          <li><strong>Good lighting</strong> — Golden hour and warm indoor lighting photograph best. Avoid harsh flash</li>
+          <li><strong>Rule of thirds</strong> — Off-center compositions feel more editorial and elegant</li>
+        </ul>
+      </div>
+
+      <div class="card card-gold">
+        <h4>Caption Formula</h4>
+        <p><strong>Hook</strong> (first line grabs attention) + <strong>Story</strong> (2-3 sentences about the event/moment) + <strong>CTA</strong> (question or call-to-action) + <strong>Hashtags</strong> (in comments or after line breaks)</p>
+        <p style="margin-top: 12px;"><em>Example: "This is what happens when you let your bar be the centerpiece. Sarah & James wanted their cocktails to steal the show — and they did. From custom lavender margaritas to a whiskey bar that had the groomsmen cheering, this wedding was one for the books. Planning your wedding? Let's talk about your bar."</em></p>
+      </div>
+    </div>
+
+    <!-- SECTION 6: OUTREACH TARGETS -->
+    <div class="section page-break">
+      <span class="section-number">06</span>
+      <h2>Outreach Targets & Partnerships</h2>
+      <div class="section-divider"></div>
+
+      <p>The wedding industry runs on referrals. Your goal is to become the bartender that every planner, venue, and photographer recommends. Here's who to build relationships with and how.</p>
+
+      <h3 style="font-size: 22px; margin: 24px 0 12px;">Tier 1 — High-Value (Pursue First)</h3>
+      <div class="card card-gold">
+        <h4>Wedding Planners & Coordinators</h4>
+        <p><strong>Why:</strong> They're the gatekeepers. When a bride asks "Do you know a mobile bartender?", you want to be the name that comes up. One good planner relationship can send you 5-10 bookings per year.</p>
+        <p style="margin-top: 8px;"><strong>How to find them:</strong> Search Houston wedding planner on Instagram, The Knot, WeddingWire. Look for planners who work in your price range (mid to high-end but not mega-luxury yet).</p>
+        <p style="margin-top: 8px;"><strong>Action:</strong> Follow, engage with their content for 2 weeks, then send a warm DM or email (see templates in Section 7). Offer to do a styled shoot together.</p>
+      </div>
+
+      <div class="card card-gold">
+        <h4>Wedding Venues</h4>
+        <p><strong>Why:</strong> Many venues have a preferred vendor list. Getting on that list means automatic referrals. Some venues require outside bartending since they don't provide it — this is your goldmine.</p>
+        <p style="margin-top: 8px;"><strong>Target venues:</strong> Boutique venues, ranches, estates, gardens, and non-traditional spaces (warehouses, rooftops) in the Houston area — these are more likely to need/allow outside bar service.</p>
+        <p style="margin-top: 8px;"><strong>Action:</strong> Visit in person with a printed portfolio/lookbook. Bring a sample cocktail menu. Ask about their vendor list process.</p>
+      </div>
+
+      <div class="card card-gold">
+        <h4>Wedding Photographers & Videographers</h4>
+        <p><strong>Why:</strong> They're at every wedding and talk to brides daily. They also produce the professional content you need. It's a perfect mutual referral relationship — you refer them, they refer you.</p>
+        <p style="margin-top: 8px;"><strong>Action:</strong> After working the same event, reach out to exchange content and discuss referrals. Offer to tag and credit them in every post that uses their photos.</p>
+      </div>
+
+      <h3 style="font-size: 22px; margin: 24px 0 12px;">Tier 2 — Strong Partnerships</h3>
+      <div class="grid-2">
+        <div class="card card-sage">
+          <h4>DJs & Live Bands</h4>
+          <p>They work every wedding weekend. Easy mutual referral — you share each other's cards at events and tag on social media.</p>
+        </div>
+        <div class="card card-sage">
+          <h4>Florists & Decorators</h4>
+          <p>They handle the aesthetic side and often coordinate with other vendors. A styled shoot with a florist makes incredible content for both of you.</p>
+        </div>
+        <div class="card card-sage">
+          <h4>Wedding Cake / Catering</h4>
+          <p>Caterers often get asked about bar service. If they don't offer it, they'll refer you. Offer a reciprocal referral arrangement.</p>
+        </div>
+        <div class="card card-sage">
+          <h4>Bridal Shops & Hair/Makeup</h4>
+          <p>They see brides early in the planning process. A business card on their counter or a "vendor we love" post can drive leads.</p>
+        </div>
+      </div>
+
+      <h3 style="font-size: 22px; margin: 24px 0 12px;">Tier 3 — Visibility & Exposure</h3>
+      <div class="card card-gold">
+        <h4>Wedding Expos & Bridal Shows</h4>
+        <p><strong>Why:</strong> Hundreds of engaged couples in one place, actively looking for vendors. This is where you can book 5-15 consultations in a single day.</p>
+        <p style="margin-top: 8px;"><strong>Houston expos to target:</strong></p>
+        <ul>
+          <li>The Houston Bridal Extravaganza Show (largest in the area)</li>
+          <li>Weddings in Houston Bridal Show</li>
+          <li>Premier Bride Wedding Expo</li>
+          <li>Galveston Island Bridal Show (beach wedding market)</li>
+          <li>Local boutique bridal markets (smaller, more intimate, lower booth cost)</li>
+        </ul>
+        <p style="margin-top: 8px;"><strong>Booth tips:</strong> Serve sample cocktails (mocktails or small pours if allowed), display your bar, have QR codes to your website, collect emails, and bring printed package cards. Make your booth Instagram-worthy — brides will tag you.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card card-sage">
+          <h4>Local Wedding Blogs & Magazines</h4>
+          <p>Submit real weddings to Houston Wedding Blog, Brides of Houston, Style Me Pretty, and local lifestyle publications. Free press + backlinks.</p>
+        </div>
+        <div class="card card-sage">
+          <h4>Networking Groups</h4>
+          <p>Join Houston wedding vendor Facebook groups, NACE (National Association for Catering & Events), and local small business meetups. Show up, build genuine relationships.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 7: PITCH TEMPLATES -->
+    <div class="section page-break">
+      <span class="section-number">07</span>
+      <h2>Partnership Pitch Templates</h2>
+      <div class="section-divider"></div>
+
+      <p>Warm, professional, and short. Nobody reads long pitches. Lead with value — what's in it for them — not what you need.</p>
+
+      <div class="card card-gold">
+        <h4>To a Wedding Planner (DM or Email)</h4>
+        <div style="background: var(--cream); padding: 20px; border-radius: 6px; margin-top: 12px; font-size: 13px;">
+          <p>Hi [Name],</p>
+          <p style="margin-top: 8px;">I've been loving your work — the [specific wedding/detail you admired] was stunning. I'm Emily with Gin & Jack Mobile Bar here in Houston. We specialize in professional mobile bartending for weddings, and I'd love to explore ways we might work together.</p>
+          <p style="margin-top: 8px;">We're fully licensed and insured, and our couples consistently tell us the bar was a highlight of their night. I'd love to send you our package info or even set up a quick coffee chat if you're open to it.</p>
+          <p style="margin-top: 8px;">Either way, just wanted to say hi and that I'm a fan of what you do!</p>
+          <p style="margin-top: 8px;">Cheers,<br>Emily Stanley<br>Gin & Jack Mobile Bar<br>ginandjackk.com | @ginandjackk</p>
+        </div>
+      </div>
+
+      <div class="card card-gold">
+        <h4>To a Venue (Email)</h4>
+        <div style="background: var(--cream); padding: 20px; border-radius: 6px; margin-top: 12px; font-size: 13px;">
+          <p>Hi [Venue Name] team,</p>
+          <p style="margin-top: 8px;">My name is Emily Stanley, and I run Gin & Jack Mobile Bar — a licensed and insured mobile bartending service based in Houston. I specialize in weddings and private events, and I'd love to learn about how your venue works with outside bar vendors.</p>
+          <p style="margin-top: 8px;">I'd be happy to send over our portfolio, insurance documentation, and package information for your review. If you have a preferred vendor list, I'd love the opportunity to be considered.</p>
+          <p style="margin-top: 8px;">I'd also be happy to stop by and introduce myself in person — I know how important it is that your vendors reflect the quality of your venue.</p>
+          <p style="margin-top: 8px;">Thank you for your time!</p>
+          <p style="margin-top: 8px;">Emily Stanley<br>Gin & Jack Mobile Bar<br>832-207-9269 | Gin.Jack.Services@gmail.com<br>ginandjackk.com</p>
+        </div>
+      </div>
+
+      <div class="card card-gold">
+        <h4>To a Photographer (DM — keep it casual)</h4>
+        <div style="background: var(--cream); padding: 20px; border-radius: 6px; margin-top: 12px; font-size: 13px;">
+          <p>Hey [Name]! Love your work — your photos from [specific wedding] were incredible. I'm Emily with Gin & Jack Mobile Bar. We were actually at [venue/event] together recently (or: I'd love to work the same events sometime).</p>
+          <p style="margin-top: 8px;">Would you ever be down to collab on a styled shoot? I think our aesthetics align really well. I can set up a full bar vignette and you'd get some beautiful portfolio shots — win-win!</p>
+          <p style="margin-top: 8px;">No pressure at all, just wanted to connect!</p>
+        </div>
+      </div>
+
+      <div class="card card-gold">
+        <h4>Post-Event Follow-Up (To Any Vendor You Worked With)</h4>
+        <div style="background: var(--cream); padding: 20px; border-radius: 6px; margin-top: 12px; font-size: 13px;">
+          <p>Hey [Name]! It was great working alongside you at [Couple's] wedding this weekend. I just wanted to reach out, say what a great job you did, and see if you'd be interested in referring each other for future weddings? I'm always looking for great [planners/photographers/DJs] to recommend to my couples, and I'd love to be on your list too. Let me know!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 8: ONLINE PRESENCE -->
+    <div class="section page-break">
+      <span class="section-number">08</span>
+      <h2>Online Presence & Vendor Platforms</h2>
+      <div class="section-divider"></div>
+
+      <p>Beyond your website and Instagram, here's where engaged couples actively search for wedding vendors. Being present on these platforms puts you in front of brides who are ready to book.</p>
+
+      <div class="card card-gold">
+        <h4>Google Business Profile (FREE — Set Up Immediately)</h4>
+        <p>This is the single most important thing you can do for local visibility. When someone Googles "mobile bartender Houston" or "wedding bartender near me," you want to show up.</p>
+        <ul style="margin-top: 8px;">
+          <li>Create a profile at business.google.com</li>
+          <li>Category: "Bartending Service" or "Event Planner"</li>
+          <li>Add photos, hours, service area (Houston metro), and your website link</li>
+          <li>Collect Google reviews aggressively — this is the #1 ranking factor</li>
+          <li>Post weekly updates (like Instagram posts but for Google)</li>
+        </ul>
+      </div>
+
+      <div class="grid-2">
+        <div class="card card-sage">
+          <h4>The Knot</h4>
+          <p>Create a free vendor profile. Brides actively search here. Add photos, reviews, pricing range, and link to your site. Paid upgrades available but start free.</p>
+        </div>
+        <div class="card card-sage">
+          <h4>WeddingWire</h4>
+          <p>Same as The Knot (they're owned by the same company). Having profiles on both doubles your visibility. Free tier is sufficient to start.</p>
+        </div>
+        <div class="card card-sage">
+          <h4>Zola</h4>
+          <p>Growing wedding platform. Create a vendor profile and list your services. Many millennial and Gen Z couples use Zola for their entire wedding planning.</p>
+        </div>
+        <div class="card card-sage">
+          <h4>Thumbtack</h4>
+          <p>Lead generation platform. People post "I need a bartender for my wedding" and you can respond. Pay-per-lead model. Good for filling gaps in your calendar.</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <h4>Facebook Strategy</h4>
+        <ul>
+          <li><strong>Facebook Business Page</strong> — Keep it updated with same content as Instagram. Many older clients (parents paying for weddings) search Facebook first.</li>
+          <li><strong>Facebook Groups</strong> — Join "Houston Brides," "Houston Wedding Planning," and similar groups. Don't spam. Answer questions, be helpful, and mention your service naturally when relevant.</li>
+          <li><strong>Marketplace</strong> — Some couples search for event services on FB Marketplace. List your service there.</li>
+        </ul>
+      </div>
+
+      <div class="card card-gold">
+        <h4>Pinterest (Underrated)</h4>
+        <p>Brides spend hours on Pinterest. Create a business account. Pin your event photos, cocktail shots, and bar setup images with keyword-rich descriptions like "Houston mobile bar wedding setup" or "signature wedding cocktail ideas." Pins drive traffic to your website for months or years — they're evergreen, unlike Instagram posts.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 9: REFERRAL & REVIEW STRATEGY -->
+    <div class="section page-break">
+      <span class="section-number">09</span>
+      <h2>Referral & Review Strategy</h2>
+      <div class="section-divider"></div>
+
+      <p>Word of mouth is your most powerful marketing channel. Here's how to systematize it so referrals and reviews come in consistently — not randomly.</p>
+
+      <h3 style="font-size: 22px; margin: 24px 0 12px;">Collecting Reviews</h3>
+      <div class="card card-gold">
+        <h4>The 48-Hour Rule</h4>
+        <p>Ask for a review within 48 hours of the event — while the excitement is still fresh. Send a warm text or email:</p>
+        <div style="background: var(--cream); padding: 16px; border-radius: 6px; margin-top: 12px; font-size: 13px;">
+          <p>"Hi [Name]! I had the best time bartending your [wedding/event] — your guests were amazing and the whole night was so beautiful. If you have a moment, it would mean the world to me if you left a quick review on Google (or Instagram). Here's the link: [direct link]. Thank you so much, and congratulations again!"</p>
+        </div>
+        <p style="margin-top: 12px;"><strong>Pro tip:</strong> Create a short link (bit.ly or similar) directly to your Google review form. Save it in your phone notes so you can send it instantly.</p>
+      </div>
+
+      <h3 style="font-size: 22px; margin: 24px 0 12px;">Referral Program Ideas</h3>
+      <div class="grid-2">
+        <div class="card card-sage">
+          <h4>Client Referral</h4>
+          <p>Offer past clients $50-$100 off their next event (or a gift card) for every referral that books. Simple, effective, and your past clients are your best salespeople.</p>
+        </div>
+        <div class="card card-sage">
+          <h4>Vendor Referral</h4>
+          <p>Offer wedding planners and photographers a referral fee ($50-$100 per booking) or reciprocal referrals. Keep track in a simple spreadsheet.</p>
+        </div>
+        <div class="card card-sage">
+          <h4>Social Referral</h4>
+          <p>Offer a small incentive (free signature cocktail upgrade) when a couple tags you in their wedding photos or shares your page in a bride group.</p>
+        </div>
+        <div class="card card-sage">
+          <h4>Event Guest Cards</h4>
+          <p>Place small, elegant business cards at the bar with "Loved our cocktails? Book us for your next event" + QR code. Capture guests while they're impressed.</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <h4>Review Platforms to Prioritize</h4>
+        <ol>
+          <li><strong>Google</strong> (most important for local SEO — aim for 20+ reviews)</li>
+          <li><strong>The Knot / WeddingWire</strong> (couples actively read these when vendor shopping)</li>
+          <li><strong>Instagram</strong> (DM screenshots, story shoutouts, tagged posts)</li>
+          <li><strong>Facebook</strong> (Page reviews help with credibility)</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- SECTION 10: SEASONAL CALENDAR -->
+    <div class="section page-break">
+      <span class="section-number">10</span>
+      <h2>Seasonal Content Calendar</h2>
+      <div class="section-divider"></div>
+
+      <p>Align your content and outreach with the natural rhythm of the wedding industry. In Houston, the two peak wedding seasons are <strong>March-May</strong> and <strong>September-November</strong> (avoiding summer heat).</p>
+
+      <table class="simple-table">
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Focus</th>
+            <th>Content & Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>January</strong></td>
+            <td>Engagement Season Boost</td>
+            <td>Target newly engaged couples (holiday proposals). Post "2025 booking" content. Reach out to planners for the new year. Update vendor profiles.</td>
+          </tr>
+          <tr>
+            <td><strong>February</strong></td>
+            <td>Valentine's + Bridal Shows</td>
+            <td>Valentine's themed cocktail posts. Attend bridal expos. "Love is in the air" content. Push early booking discounts.</td>
+          </tr>
+          <tr>
+            <td><strong>March-May</strong></td>
+            <td>Peak Wedding Season #1</td>
+            <td>Heavy event content. Post recaps every week. Collect reviews immediately. Network hard at events. Your feed should be full of real work.</td>
+          </tr>
+          <tr>
+            <td><strong>June-August</strong></td>
+            <td>Summer Slow Season (Houston heat)</td>
+            <td>Use this time to: update your website, do styled shoots, reach out to new vendors, attend networking events, plan fall marketing, create educational content.</td>
+          </tr>
+          <tr>
+            <td><strong>September-November</strong></td>
+            <td>Peak Wedding Season #2</td>
+            <td>Same as spring — heavy event content, networking, review collection. Holiday party season starts in November. Start marketing private events.</td>
+          </tr>
+          <tr>
+            <td><strong>December</strong></td>
+            <td>Holiday Parties + Year End</td>
+            <td>Corporate holiday party content. "Year in review" post. Thank your vendors and clients. Tease next year's availability. Holiday cocktail recipes.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card card-gold" style="margin-top: 24px;">
+        <h4>Key Dates to Post Around</h4>
+        <ul>
+          <li><strong>National Margarita Day</strong> (Feb 22) — fun cocktail post</li>
+          <li><strong>Valentine's Day</strong> — romantic cocktails, engagement content</li>
+          <li><strong>Wedding Season Kickoff</strong> (March) — "our books are filling up" urgency</li>
+          <li><strong>National Cocktail Day</strong> (March 24) — recipe content</li>
+          <li><strong>Derby Day</strong> (May) — mint julep content, classy vibes</li>
+          <li><strong>National Bourbon Day</strong> (June 14) — spotlight a whiskey cocktail</li>
+          <li><strong>Engagement Season</strong> (Nov-Jan) — target newly engaged couples</li>
+          <li><strong>Small Business Saturday</strong> (Nov) — share your story, behind the scenes</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CLOSING -->
+    <div class="section page-break" style="text-align: center; padding-top: 80px;">
+      <div style="width: 80px; height: 1px; background: var(--gold); margin: 0 auto 40px;"></div>
+      <h2 style="font-size: 36px;">You've Got This</h2>
+      <p class="script" style="font-size: 28px; color: var(--gold); margin: 16px 0 32px;">We bring the bar. You make the memories.</p>
+      <p style="max-width: 500px; margin: 0 auto; color: var(--brown-light); line-height: 1.9;">
+        This guide is a living document. Come back to it as you grow,
+        adapt the strategies that work, and don't be afraid to experiment.
+        The wedding industry rewards consistency, authenticity, and genuine
+        relationships. Emily — you already have the talent and the heart.
+        Now go show Houston what Gin & Jack is all about.
+      </p>
+      <div style="width: 50px; height: 1px; background: var(--gold); margin: 40px auto;"></div>
+      <p style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brown-light); opacity: 0.6;">
+        Gin & Jack Mobile Bar — Houston, Texas
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    // Print = download as PDF
+    document.querySelector('.download-btn').addEventListener('click', function() {
+      window.print();
+    });
+  </script>
+
+</body>
+</html>
