@@ -5,7 +5,7 @@ import Image from 'next/image';
 import gsap from 'gsap';
 
 export default function LoadingScreen() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [animatingOut, setAnimatingOut] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLDivElement>(null);
@@ -15,8 +15,6 @@ export default function LoadingScreen() {
   const shimmerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setShow(true);
-
     // Lock scroll during loading screen
     document.body.style.overflow = 'hidden';
 
