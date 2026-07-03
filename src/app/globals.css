@@ -93,6 +93,15 @@ body {
   background: #A8894F;
 }
 
+/* Hide scrollbar for horizontal scroll */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Chatbot open state */
 .chatbot-open {
   overflow: hidden;

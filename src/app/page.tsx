@@ -3,6 +3,7 @@ import Image from "next/image";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import Marquee from "@/components/Marquee";
 import AnimatedSection from "@/components/AnimatedSection";
+import WhySection from "@/components/WhySection";
 
 export default function Home() {
   const services = [
@@ -166,41 +167,7 @@ export default function Home() {
       </section>
 
       {/* 5. WHY CHOOSE US */}
-      <section className="py-24 md:py-32 bg-cream">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl text-brown">
-              Why Gin &amp; Jack
-            </h2>
-            <div className="w-16 h-px bg-gold mx-auto mt-6" />
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {reasons.map((reason, index) => (
-              <AnimatedSection key={reason.title} delay={index * 0.1}>
-                <div className="relative aspect-square rounded-xl overflow-hidden group cursor-default">
-                  <Image
-                    src={reason.image}
-                    alt={reason.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
-                  <div className="absolute inset-0 bg-brown/60 group-hover:bg-brown/70 transition-colors duration-500" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 md:p-6">
-                    <h3 className="font-serif text-lg md:text-2xl text-warm-white mb-2 md:mb-3">
-                      {reason.title}
-                    </h3>
-                    <div className="w-8 h-px bg-gold mb-2 md:mb-3" />
-                    <p className="font-sans text-xs md:text-sm text-warm-white/85 leading-relaxed">
-                      {reason.description}
-                    </p>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhySection reasons={reasons} />
 
       {/* 6. CTA BANNER */}
       <section className="py-20 md:py-28 text-center px-6 relative overflow-hidden">

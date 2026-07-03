@@ -61,16 +61,16 @@ export default function Navbar() {
         {/* UNSCROLLED STATE: Logo left, links right */}
         <div
           className={`mx-auto px-6 lg:px-12 transition-all duration-500 ease-in-out ${
-            scrolled ? "h-0 opacity-0 overflow-hidden" : "h-24 opacity-100"
+            scrolled ? "h-0 opacity-0 overflow-hidden" : "h-28 opacity-100"
           } flex items-center justify-between`}
         >
           <Link href="/" className="relative flex-shrink-0">
             <Image
               src="/logos/full-dark.png"
               alt="Gin & Jack Mobile Bar"
-              width={220}
+              width={320}
               height={66}
-              className="h-16 w-auto"
+              className="h-24 w-auto"
               priority
             />
           </Link>
@@ -143,9 +143,9 @@ export default function Navbar() {
             <Image
               src="/logos/scroll-logo.png"
               alt="G&J"
-              width={60}
-              height={60}
-              className="h-10 w-auto"
+              width={90}
+              height={90}
+              className="h-14 w-auto"
               priority
             />
           </Link>
@@ -190,7 +190,7 @@ export default function Navbar() {
       </nav>
 
       {/* Spacer */}
-      <div className={`transition-all duration-500 ${scrolled ? "h-16" : "h-24"}`} />
+      <div className={`transition-all duration-500 ${scrolled ? "h-16" : "h-28"}`} />
 
       {/* Mobile overlay */}
       <div
