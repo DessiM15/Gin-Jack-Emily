@@ -169,35 +169,7 @@ export default function Home() {
       {/* 5. WHY CHOOSE US */}
       <WhySection reasons={reasons} />
 
-      {/* 6. CTA BANNER */}
-      <section className="py-20 md:py-28 text-center px-6 relative overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1920&q=80"
-          alt="Cocktails background"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-brown/70" />
-        <AnimatedSection direction="none">
-          <div className="relative z-10">
-            <h2 className="font-serif text-3xl md:text-4xl text-warm-white">
-              Let&apos;s Make Your Event Unforgettable
-            </h2>
-            <p className="font-script text-xl md:text-2xl text-gold-light mt-4">
-              Your celebration, our passion
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block border-2 border-gold text-gold px-10 py-3.5 text-sm uppercase tracking-[0.2em] hover:bg-gold hover:text-warm-white transition-all duration-300 mt-8 font-sans"
-            >
-              Get in Touch
-            </Link>
-          </div>
-        </AnimatedSection>
-      </section>
-
-      {/* 7. TESTIMONIALS PLACEHOLDER */}
+      {/* 6. KIND WORDS */}
       <section className="py-24 bg-warm-white px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -229,6 +201,34 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* 7. CTA BANNER */}
+      <section className="py-20 md:py-28 text-center px-6 relative overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1920&q=80"
+          alt="Cocktails background"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-brown/70" />
+        <AnimatedSection direction="none">
+          <div className="relative z-10">
+            <h2 className="font-serif text-3xl md:text-4xl text-warm-white">
+              Let&apos;s Make Your Event Unforgettable
+            </h2>
+            <p className="font-script text-xl md:text-2xl text-gold-light mt-4">
+              Your celebration, our passion
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block border-2 border-gold text-gold px-10 py-3.5 text-sm uppercase tracking-[0.2em] hover:bg-gold hover:text-warm-white transition-all duration-300 mt-8 font-sans"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </AnimatedSection>
       </section>
     </>
   );
