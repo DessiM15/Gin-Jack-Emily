@@ -101,8 +101,8 @@ export default function ContactForm() {
 
         {/* Body text */}
         <p className="font-sans text-brown-light max-w-md mx-auto mb-8 leading-relaxed">
-          Thank you for reaching out! We&apos;ve received your inquiry and Emily
-          will be in touch within 24 hours to start planning your perfect event.
+          Thank you for reaching out! We&apos;ve received your inquiry and
+          we will be in touch within 24 hours to start planning your perfect event.
         </p>
 
         {/* Instagram CTA */}
