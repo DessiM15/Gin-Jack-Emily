@@ -72,28 +72,28 @@ export default function Home() {
 
   const reasons = [
     {
-      number: "01",
       title: "Professional Service",
       description:
         "Licensed, insured, and impeccably trained. We bring the expertise of a top-tier bar to your event.",
+      image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&q=80",
     },
     {
-      number: "02",
       title: "Crafted Cocktails",
       description:
         "From classic favorites to custom signature drinks, every cocktail is crafted with care and precision.",
+      image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80",
     },
     {
-      number: "03",
       title: "Stress-Free Setup",
       description:
         "We arrive fully equipped with everything needed. You provide the drinks, we handle the rest.",
+      image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80",
     },
     {
-      number: "04",
       title: "Personal Touch",
       description:
         "Every event is unique. We work with you to create a bar experience that perfectly matches your vision.",
+      image: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80",
     },
   ];
 
@@ -167,26 +167,34 @@ export default function Home() {
 
       {/* 5. WHY CHOOSE US */}
       <section className="py-24 md:py-32 bg-cream">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl text-brown">
               Why Gin &amp; Jack
             </h2>
             <div className="w-16 h-px bg-gold mx-auto mt-6" />
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {reasons.map((reason, index) => (
               <AnimatedSection key={reason.title} delay={index * 0.1}>
-                <div className="text-center">
-                  <span className="font-serif text-4xl text-gold font-bold">
-                    {reason.number}
-                  </span>
-                  <h3 className="font-serif text-xl text-brown mt-4 mb-3">
-                    {reason.title}
-                  </h3>
-                  <p className="font-sans text-sm text-brown-light leading-relaxed">
-                    {reason.description}
-                  </p>
+                <div className="relative aspect-square rounded-xl overflow-hidden group cursor-default">
+                  <Image
+                    src={reason.image}
+                    alt={reason.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-brown/60 group-hover:bg-brown/70 transition-colors duration-500" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 md:p-6">
+                    <h3 className="font-serif text-lg md:text-2xl text-warm-white mb-2 md:mb-3">
+                      {reason.title}
+                    </h3>
+                    <div className="w-8 h-px bg-gold mb-2 md:mb-3" />
+                    <p className="font-sans text-xs md:text-sm text-warm-white/85 leading-relaxed">
+                      {reason.description}
+                    </p>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
