@@ -35,7 +35,7 @@ export default function GalleryPage() {
       aspect: "aspect-[3/4]",
     },
     {
-      src: "https://images.unsplash.com/photo-1574096079513-d8259312b020?w=600&q=80",
+      src: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80",
       alt: "Bar setup",
       aspect: "aspect-[4/3]",
     },

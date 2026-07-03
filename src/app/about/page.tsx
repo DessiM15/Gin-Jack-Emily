@@ -26,7 +26,7 @@ export default function AboutPage() {
       {/* 1. PAGE HERO BANNER */}
       <section className="h-[50vh] md:h-[60vh] relative flex items-center justify-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1574096079513-d8259312b020?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1920&q=80"
           alt="Elegant bar setup"
           fill
           className="object-cover"
@@ -147,20 +147,30 @@ export default function AboutPage() {
       </section>
 
       {/* 5. CTA BANNER */}
-      <section className="py-20 md:py-28 bg-brown text-center px-6">
+      <section className="py-20 md:py-28 text-center px-6 relative overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1920&q=80"
+          alt="Cocktails background"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-brown/70" />
         <AnimatedSection direction="none">
-          <h2 className="font-serif text-3xl md:text-4xl text-warm-white">
-            Ready to Raise a Glass?
-          </h2>
-          <p className="font-script text-xl md:text-2xl text-gold-light mt-4">
-            Let&apos;s celebrate together
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block border-2 border-gold text-gold px-10 py-3.5 text-sm uppercase tracking-[0.2em] hover:bg-gold hover:text-warm-white transition-all duration-300 mt-8 font-sans"
-          >
-            Contact Us
-          </Link>
+          <div className="relative z-10">
+            <h2 className="font-serif text-3xl md:text-4xl text-warm-white">
+              Ready to Raise a Glass?
+            </h2>
+            <p className="font-script text-xl md:text-2xl text-gold-light mt-4">
+              Let&apos;s celebrate together
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block border-2 border-gold text-gold px-10 py-3.5 text-sm uppercase tracking-[0.2em] hover:bg-gold hover:text-warm-white transition-all duration-300 mt-8 font-sans"
+            >
+              Contact Us
+            </Link>
+          </div>
         </AnimatedSection>
       </section>
     </>

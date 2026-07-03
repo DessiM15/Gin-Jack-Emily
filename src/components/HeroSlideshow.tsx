@@ -60,7 +60,7 @@ export default function HeroSlideshow() {
       {/* Text Overlay */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
         {/* Logo */}
-        <div className="relative w-[180px] md:w-[280px] h-[120px] md:h-[180px] mb-6">
+        <div className="relative w-[280px] md:w-[450px] h-[180px] md:h-[280px] mb-6">
           <Image
             src="/logos/full-light.png"
             alt="Gin & Jack Mobile Bar"
@@ -71,19 +71,19 @@ export default function HeroSlideshow() {
         </div>
 
         {/* Subtitle */}
-        <p className="font-sans text-warm-white/90 text-sm uppercase tracking-[0.3em] mb-4">
+        <p className="font-sans text-warm-white/90 text-base md:text-lg uppercase tracking-[0.3em] mb-4">
           Mobile Bartending
         </p>
 
         {/* Tagline */}
-        <p className="font-script text-2xl md:text-4xl text-gold-light">
+        <p className="font-script text-3xl md:text-5xl text-gold-light">
           We bring the bar. You make the memories.
         </p>
 
         {/* CTA Button */}
         <Link
           href="/contact"
-          className="mt-8 border-2 border-warm-white text-warm-white px-8 py-3 text-sm uppercase tracking-[0.2em] font-sans hover:bg-warm-white hover:text-brown transition-all duration-300 inline-block"
+          className="mt-10 border-2 border-warm-white text-warm-white px-10 py-4 text-sm md:text-base uppercase tracking-[0.2em] font-sans hover:bg-warm-white hover:text-brown transition-all duration-300 inline-block"
         >
           Book Your Event
         </Link>

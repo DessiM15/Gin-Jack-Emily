@@ -7,7 +7,7 @@ export default function Marquee() {
     'Professional Service. Crafted Cocktails. Unforgettable Experiences.',
   ];
 
-  const separator = <span className="text-gold mx-8">◆</span>;
+  const separator = <span className="text-gold-light/60 mx-8">◆</span>;
 
   const taglineRow = taglines.map((tagline, i) => (
     <span key={i} className="inline-flex items-center">
@@ -17,9 +17,9 @@ export default function Marquee() {
   ));
 
   return (
-    <div className="bg-warm-white border-y border-gold/20 overflow-hidden">
+    <div className="bg-sage-dark overflow-hidden">
       <div className="py-4 md:py-5">
-        <div className="animate-marquee flex whitespace-nowrap font-serif text-lg md:text-xl text-brown/80">
+        <div className="animate-marquee flex whitespace-nowrap font-serif text-lg md:text-xl text-warm-white/90">
           <div className="flex items-center shrink-0">
             {taglineRow}
             {separator}

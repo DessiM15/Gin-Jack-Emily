@@ -20,9 +20,9 @@ export default function Footer() {
             <Image
               src="/logos/full-light.png"
               alt="Gin & Jack Mobile Bar"
-              width={140}
-              height={42}
-              className="h-10 w-auto"
+              width={320}
+              height={96}
+              className="h-24 w-auto"
             />
             <p className="font-script text-gold-light text-lg italic leading-relaxed">
               Crafting unforgettable cocktails for life&apos;s biggest
