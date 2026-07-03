@@ -61,16 +61,16 @@ export default function Navbar() {
         {/* UNSCROLLED STATE: transparent, light logo + light links */}
         <div
           className={`mx-auto px-6 lg:px-12 transition-all duration-500 ease-in-out ${
-            scrolled ? "h-0 opacity-0 overflow-hidden" : "h-36 opacity-100"
+            scrolled ? "h-0 opacity-0 overflow-hidden" : "h-52 opacity-100"
           } flex items-center justify-between`}
         >
           <Link href="/" className="relative flex-shrink-0">
             <Image
               src="/logos/full-light.png"
               alt="Gin & Jack Mobile Bar"
-              width={480}
-              height={160}
-              className="h-40 w-auto"
+              width={816}
+              height={272}
+              className="h-[272px] w-auto"
               priority
             />
           </Link>
@@ -115,7 +115,7 @@ export default function Navbar() {
         {/* SCROLLED STATE: solid bg, dark logo centered, dark links */}
         <div
           className={`mx-auto px-6 lg:px-12 transition-all duration-500 ease-in-out ${
-            scrolled ? "h-16 opacity-100" : "h-0 opacity-0 overflow-hidden"
+            scrolled ? "h-20 opacity-100" : "h-0 opacity-0 overflow-hidden"
           } flex items-center justify-between`}
         >
           {/* Left links (desktop) */}
@@ -143,9 +143,9 @@ export default function Navbar() {
             <Image
               src="/logos/scroll-logo.png"
               alt="G&J"
-              width={90}
-              height={90}
-              className="h-14 w-auto"
+              width={180}
+              height={180}
+              className="h-28 w-auto"
               priority
             />
           </Link>
@@ -190,7 +190,7 @@ export default function Navbar() {
       </nav>
 
       {/* Spacer — no spacer when unscrolled (nav overlays hero), spacer when scrolled */}
-      <div className={`transition-all duration-500 ${scrolled ? "h-16" : "h-0"}`} />
+      <div className={`transition-all duration-500 ${scrolled ? "h-20" : "h-0"}`} />
 
       {/* Mobile overlay */}
       <div
