@@ -58,19 +58,19 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        {/* UNSCROLLED STATE: Logo left, links right */}
+        {/* UNSCROLLED STATE: transparent, light logo + light links */}
         <div
           className={`mx-auto px-6 lg:px-12 transition-all duration-500 ease-in-out ${
-            scrolled ? "h-0 opacity-0 overflow-hidden" : "h-28 opacity-100"
+            scrolled ? "h-0 opacity-0 overflow-hidden" : "h-36 opacity-100"
           } flex items-center justify-between`}
         >
           <Link href="/" className="relative flex-shrink-0">
             <Image
-              src="/logos/full-dark.png"
+              src="/logos/full-light.png"
               alt="Gin & Jack Mobile Bar"
-              width={320}
-              height={66}
-              className="h-24 w-auto"
+              width={480}
+              height={160}
+              className="h-40 w-auto"
               priority
             />
           </Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
                 className={`relative font-sans text-xs uppercase tracking-[0.2em] transition-colors duration-300 ${
                   isActive(link.href)
                     ? "text-gold"
-                    : "text-brown hover:text-gold"
+                    : "text-warm-white/90 hover:text-gold"
                 }`}
               >
                 {link.label}
@@ -94,25 +94,25 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="ml-2 bg-gold text-warm-white px-6 py-2.5 text-xs uppercase tracking-[0.2em] font-sans hover:bg-gold-dark transition-colors duration-300"
+              className="ml-2 border border-gold text-gold px-6 py-2.5 text-xs uppercase tracking-[0.2em] font-sans hover:bg-gold hover:text-warm-white transition-all duration-300"
             >
               Book Now
             </Link>
           </div>
 
-          {/* Mobile hamburger */}
+          {/* Mobile hamburger — light color for transparent nav */}
           <button
             onClick={() => setMobileOpen(true)}
             className="lg:hidden relative w-8 h-8 flex flex-col items-center justify-center gap-[6px]"
             aria-label="Open menu"
           >
-            <span className="block w-6 h-[1.5px] bg-brown transition-all duration-300" />
-            <span className="block w-6 h-[1.5px] bg-brown transition-all duration-300" />
-            <span className="block w-4 h-[1.5px] bg-brown transition-all duration-300 self-end" />
+            <span className="block w-6 h-[1.5px] bg-warm-white transition-all duration-300" />
+            <span className="block w-6 h-[1.5px] bg-warm-white transition-all duration-300" />
+            <span className="block w-4 h-[1.5px] bg-warm-white transition-all duration-300 self-end" />
           </button>
         </div>
 
-        {/* SCROLLED STATE: Links left, centered scroll-logo, links + CTA right */}
+        {/* SCROLLED STATE: solid bg, dark logo centered, dark links */}
         <div
           className={`mx-auto px-6 lg:px-12 transition-all duration-500 ease-in-out ${
             scrolled ? "h-16 opacity-100" : "h-0 opacity-0 overflow-hidden"
@@ -176,7 +176,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile hamburger (scrolled) */}
+          {/* Mobile hamburger (scrolled — dark) */}
           <button
             onClick={() => setMobileOpen(true)}
             className="lg:hidden absolute right-6 w-8 h-8 flex flex-col items-center justify-center gap-[6px]"
@@ -189,8 +189,8 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Spacer */}
-      <div className={`transition-all duration-500 ${scrolled ? "h-16" : "h-28"}`} />
+      {/* Spacer — no spacer when unscrolled (nav overlays hero), spacer when scrolled */}
+      <div className={`transition-all duration-500 ${scrolled ? "h-16" : "h-0"}`} />
 
       {/* Mobile overlay */}
       <div
