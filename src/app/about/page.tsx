@@ -53,10 +53,10 @@ export default function AboutPage() {
               <div className="md:col-span-2">
                 <div className="aspect-[3/4] bg-cream-dark rounded-lg relative overflow-hidden">
                   <Image
-                    src="/emily-headshot.PNG"
+                    src="/emily-photo-cropped.png"
                     alt="Emily Stanley, owner of Gin & Jack Mobile Bar"
                     fill
-                    className="object-cover object-[50%_20%]"
+                    className="object-cover"
                     sizes="(max-width: 768px) 100vw, 40vw"
                   />
                 </div>
