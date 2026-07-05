@@ -29,38 +29,40 @@ export default function ServicesPage() {
 
   const packages = [
     {
-      name: "To Have and To Hold",
+      name: "The Neat",
       price: "$800",
       featured: false,
-      features: ["Cups", "Napkins", "Straws", "Beer", "Wine"],
+      features: [
+        "Premium Acrylic Cups",
+        "High Quality Napkins",
+        "Black Bar Straws",
+      ],
     },
     {
-      name: "Cheers To Us",
+      name: "The Crafted",
       price: "$1,000",
       featured: true,
       features: [
-        "Cups",
-        "Napkins",
-        "Straws",
+        "Premium Acrylic Cups",
+        "High Quality Napkins",
+        "Black Bar Straws",
         "Fresh Fruits",
-        "Beer",
-        "Wine",
         "Mixed Drinks",
       ],
     },
     {
-      name: "Happily Ever After",
+      name: "The Curated",
       price: "$1,400",
       featured: false,
       features: [
-        "Cups",
-        "Napkins",
-        "Straws",
+        "Premium Acrylic Cups",
+        "High Quality Napkins",
+        "Black Bar Straws",
         "Fresh Fruits",
-        "3 Mixers",
-        "Bar Decor",
+        "2 Mixers",
+        "Timeless Bar Decorations",
         "Personalized His & Hers Specialty Cocktails",
-        "Water, Tea & Lemonade",
+        "Tea & Lemonade",
       ],
     },
   ];
@@ -163,12 +165,15 @@ export default function ServicesPage() {
                   <h3 className="font-serif text-2xl text-brown mt-2">
                     {pkg.name}
                   </h3>
-                  <p className="font-serif text-4xl md:text-5xl text-gold font-bold mt-4">
+                  <p className="font-sans text-xs uppercase tracking-wider text-brown-light mt-4">
+                    Starting at
+                  </p>
+                  <p className="font-serif text-4xl md:text-5xl text-gold font-bold mt-1">
                     {pkg.price}
                   </p>
                   <div className="w-12 h-px bg-gold/30 mx-auto my-6" />
 
-                  <ul className="space-y-3 mb-8 flex-grow">
+                  <ul className="space-y-3 mb-6 flex-grow">
                     {pkg.features.map((feature) => (
                       <li
                         key={feature}
@@ -181,6 +186,10 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
+
+                  <p className="font-sans text-xs text-gold italic mb-6">
+                    Beer and wine served with package
+                  </p>
 
                   <Link
                     href="/contact"
@@ -201,11 +210,14 @@ export default function ServicesPage() {
           <div className="mt-16 text-center max-w-2xl mx-auto">
             <div className="w-12 h-px bg-gold/30 mx-auto mb-6" />
             <p className="text-sm text-brown-light font-sans leading-relaxed">
-              All packages include 1 bartender for up to 125 guests. For events
-              with more than 125 guests, a second bartender is added at $5 per
-              additional guest. All packages include 6 hours of service.
-              Additional hours are available at $75/hour. Beer, wine, and liquor
-              are not included — all packages are BYOB (Bring Your Own Booze).
+              All packages include 1 phone call consultation and shopping list
+              upon booking. All packages include 1 bartender per 85 guests for
+              6 hours of service. Beer, wine, and liquor are not
+              included — all packages are BYOB (Bring Your Own Booze).
+            </p>
+            <p className="text-sm text-brown-light font-sans leading-relaxed mt-4">
+              A 20% gratuity will be added to the final payment if a tip jar is
+              not preferred.
             </p>
           </div>
         </div>

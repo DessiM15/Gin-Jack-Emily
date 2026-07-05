@@ -51,14 +51,14 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-5 gap-12 items-start">
               {/* Left column - Photo placeholder */}
               <div className="md:col-span-2">
-                <div className="aspect-[3/4] bg-cream-dark rounded-lg flex items-center justify-center relative overflow-hidden">
-                  <div className="text-center px-6">
-                    <div className="w-12 h-px bg-gold mx-auto mb-4" />
-                    <p className="font-script text-xl text-gold">
-                      Photo Coming Soon
-                    </p>
-                    <div className="w-12 h-px bg-gold mx-auto mt-4" />
-                  </div>
+                <div className="aspect-[3/4] bg-cream-dark rounded-lg relative overflow-hidden">
+                  <Image
+                    src="/emily-headshot.PNG"
+                    alt="Emily Stanley, owner of Gin & Jack Mobile Bar"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                  />
                 </div>
               </div>
 

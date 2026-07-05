@@ -169,37 +169,29 @@ export default function Home() {
       {/* 5. WHY CHOOSE US */}
       <WhySection reasons={reasons} />
 
-      {/* 6. KIND WORDS */}
+      {/* 6. LEAVE A REVIEW */}
       <section className="py-24 bg-warm-white px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl text-brown">
-              Kind Words
-            </h2>
-            <div className="w-16 h-px bg-gold mx-auto mt-6" />
-          </div>
-          <p className="font-sans text-brown-light italic text-center mb-12">
-            Coming soon — we can&apos;t wait to share what our clients have to
-            say!
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <AnimatedSection key={i} delay={i * 0.15}>
-                <div className="border border-gold/20 rounded-lg p-8 text-center min-h-[200px] flex flex-col items-center justify-center">
-                  <svg
-                    className="w-8 h-8 text-gold/30 mb-4"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                  <p className="font-sans text-brown-light/40 text-sm italic">
-                    Your review here
-                  </p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
+        <div className="max-w-2xl mx-auto">
+          <AnimatedSection>
+            <div className="text-center">
+              <h2 className="font-serif text-3xl md:text-4xl text-brown">
+                Leave a Review
+              </h2>
+              <div className="w-16 h-px bg-gold mx-auto mt-6 mb-6" />
+              <p className="font-sans text-brown-light leading-relaxed mb-8">
+                Had a great experience with Gin &amp; Jack? We&apos;d love to
+                hear about it! Your feedback means the world to us.
+              </p>
+              <a
+                href="https://www.facebook.com/share/1C6y57HcrP/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block border-2 border-gold text-gold px-10 py-3.5 text-sm uppercase tracking-[0.2em] hover:bg-gold hover:text-warm-white transition-all duration-300 font-sans"
+              >
+                Leave a Review on Facebook
+              </a>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
