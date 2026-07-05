@@ -150,10 +150,10 @@ export default function ContactPage() {
                         Email
                       </p>
                       <a
-                        href="mailto:Gin.Jack.Services@gmail.com"
+                        href="mailto:emily@ginandjackbar.com"
                         className="font-sans text-sm text-brown hover:text-gold transition"
                       >
-                        Gin.Jack.Services@gmail.com
+                        emily@ginandjackbar.com
                       </a>
                     </div>
                   </div>

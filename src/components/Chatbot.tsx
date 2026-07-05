@@ -73,7 +73,7 @@ function getBotResponse(action: string): { text: string; options: ChatOption[] }
     case 'Something Else':
     case 'Contact Emily':
       return {
-        text: "We'd love to hear from you personally! Here's how to reach Emily:\n\n📧 Gin.Jack.Services@gmail.com\n📞 832-207-9269\n\nDon't be shy — whether you have a quick question or want to start planning your dream event, Emily would love to chat! 💛",
+        text: "We'd love to hear from you personally! Here's how to reach Emily:\n\n📧 emily@ginandjackbar.com\n📞 832-207-9269\n\nDon't be shy — whether you have a quick question or want to start planning your dream event, Emily would love to chat! 💛",
         options: [{ label: 'Back to Menu', action: 'Back to Menu' }],
       };
     case 'Back to Menu':
