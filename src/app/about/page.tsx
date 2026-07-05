@@ -56,7 +56,7 @@ export default function AboutPage() {
                     src="/emily-headshot.PNG"
                     alt="Emily Stanley, owner of Gin & Jack Mobile Bar"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-[50%_20%]"
                     sizes="(max-width: 768px) 100vw, 40vw"
                   />
                 </div>
