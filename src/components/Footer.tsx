@@ -12,7 +12,7 @@ const quickLinks = [
 export default function Footer() {
   return (
     <footer className="bg-brown text-cream">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12 pt-16 pb-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12 pt-16 pb-24 md:pb-8">
         {/* Top 4-column grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Column 1: Logo & Tagline */}
@@ -159,9 +159,21 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gold/20 mt-12 pt-8">
+        <div className="border-t border-gold/20 mt-12 pt-8 space-y-2">
           <p className="text-center text-sm text-cream/50">
             &copy; 2025 Gin &amp; Jack Mobile Bar. All rights reserved.
+          </p>
+          <p className="text-center text-xs text-cream/40">
+            Website by{" "}
+            <a
+              href="https://smartscaleagent.com/"
+              target="_blank"
+              rel="noopener"
+              className="text-cream/60 hover:text-gold underline underline-offset-2 decoration-cream/25 hover:decoration-gold transition-colors duration-300"
+            >
+              Smart Scale
+            </a>
+            , LLC &mdash; Houston, TX
           </p>
         </div>
       </div>
