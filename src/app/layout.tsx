@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
 import LoadingScreen from "@/components/LoadingScreen";
 import ScrollToTop from "@/components/ScrollToTop";
+import { SITE_URL } from "@/lib/site";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Gin & Jack Mobile Bar | Houston Mobile Bartending",
   description:
     "Gin & Jack Mobile Bar is Houston's premier mobile bartending service for weddings, engagements, and private events. Professional service, crafted cocktails, and unforgettable experiences.",
